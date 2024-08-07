@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="table-responsive
+    ">
+        <h2>Departments <a href="/departments/add" class="btn btn-success pull-right">Add New Department</a></h2>
+        <hr>
+
+        {{#if departments}}
+            <table class="table" border="2">
+                <thead>
+                    <tr>
+                        <th>Department Number</th>
+                        <th>Department Name</th>
+                    </tr>
+                </thead>
+                {{#each departments}}
+                    <tr>
+                        <td> <a href="/employees?department={{departmentId}}">{{departmentId}}</a> </td>
+                        <td> <a href="/department/{{departmentId}}">{{departmentName}}</a> </td>
+                    </tr>
+                {{/each}}
+            </table>
+        {{else}}
+            <div class="col-md-12 text-center">
+                <strong>{{message}}</strong>
+            </div>
+        {{/if}}
+    </div>
+</div>

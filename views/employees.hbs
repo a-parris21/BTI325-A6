@@ -1,0 +1,57 @@
+<div class="row">
+    <link rel="stylesheet" href="../../public/css/site.css">
+    <style>
+        th, td {
+            padding: 8px;
+        }
+    </style>
+    <div class="table-responsive">
+    
+        <h2>Employees <a href="/employees/add" class="btn btn-success pull-right">Add New Employee</a></h2>
+        <hr>
+
+        {{#if employees}}
+            <table class="table" border="2">
+                <thead>
+                    <tr>
+                        <th>Employee Num</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Manager ID</th>
+                        <th>Status</th>
+                        <th>Department</th>
+                        <th>Hired On</th>
+                        <th></th><!-- column to hold the remove button -->
+                    </tr>
+                </thead>
+
+                {{#each employees}}
+                    <tr>
+                        <td>{{employeeNum}}</td>
+                        <td> <a href="/employee/{{employeeNum}}">{{firstName}} {{lastName}}</a> </td>
+                        <td> <a href="mailto: {{email}}">{{email}}</a> </td>
+                        <td>{{addressStreet}}, {{addressCity}}, {{addressState}}, {{addressPostal}}</td>
+
+                        {{#if isManager}}
+                            <td></td>
+                        {{else}}
+                            <td> <a href="/employees?manager={{employeeManagerNum}}">{{employeeManagerNum}}</a> </td>
+                        {{/if}}
+                        
+                        <td> <a href="/employees?status={{status}}">{{status}}</a> </td>
+
+                        <td> <a href="/employees?department={{department}}">{{department}}</a> </td>
+                        <td>{{hireDate}}</td>
+
+                        <td> <a href="/employees/delete/{{employeeNum}}" class="btn btn-danger">Remove</a> </td>
+                    </tr>
+                {{/each}}
+            </table>
+        {{else}}
+            <div class="col-md-12 text-center">
+                <strong>{{message}}</strong>
+            </div>
+        {{/if}}
+    </div>
+</div>
