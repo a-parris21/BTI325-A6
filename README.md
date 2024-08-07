@@ -47,3 +47,8 @@ This project is a web-based employee database management system (DBMS) developed
 
 ## Acknowledgements
 This project was developed as part of the BTI325 course at Seneca Polytechnic. Special thanks to my course instructor for her support and feedback.
+
+## Notice
+Please note that the application was previously hosted on Heroku. Due to changes in hosting arrangements, the previous hosting service is no longer available. As a result, the live version of the app is currently inaccessible.
+
+The repository is now intended for local development and testing purposes.
