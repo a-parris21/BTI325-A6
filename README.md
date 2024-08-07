@@ -53,7 +53,7 @@ Please note that the application was previously hosted on Heroku. Due to changes
 
 Additionally, the MongoDB database used in the previous setup has been closed due to inactivity. To use the application, you will need to update the database connection information and user credentials in the following files:
 
-- data-service.js: Update the database connection information to reflect the new MongoDB instance.
-- data-service-auth.js: Modify the connection details and any user authentication settings as needed.
+- `data-service.js`: Update the database connection information to reflect the new MongoDB instance.
+- `data-service-auth.js`: Modify the connection details and any user authentication settings as needed.
 
 The repository is now intended for local development and testing purposes.
