@@ -1,7 +1,7 @@
-# BTI325 Assignment 6
+# Employee Manager Lite
 
 ## Overview
-This project is a web-based employee database management system (DBMS) developed for Assignment 6 (A6) of the BTI325 class. The application features CRUD operations for employee records, user authentication, data storage, session management, and file uploads.
+This project is a web-based employee database management system (DBMS) developed for Assignment 6 (A6) of the BTI325 (Web Programming Tools & Frameworks) course. The application features CRUD operations for employee records, user authentication, data storage, session management, and file uploads.
 
 ## Features
 - CRUD Operations: Create, Read, Update, and Delete employee records.
